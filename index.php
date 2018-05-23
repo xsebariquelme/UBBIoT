@@ -5,7 +5,7 @@
 //estadoAire();
 //estadoClima();
 
-function datosVolcan()
+/* function datosVolcan()
 {
 $curl = curl_init('http://www.sernageomin.cl/complejo-volcanico-nevados-de-chillan/');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
@@ -25,17 +25,17 @@ if ( preg_match($regex, $page, $listaVolcan) )
 else 
     print "Not found"; 
 }
+ */
 
-
-function santoral()
+/* function santoral()
 {
 $json = file_get_contents('http://indicadoresdeldia.cl/webservice/indicadores.json');
 $obj = json_decode($json);
 echo "\n";
 echo 'Santoral de hoy: '.$obj->santoral->hoy;
-}
+} */
 
-function economicos()
+/* function economicos()
 {
 $json = file_get_contents('http://indicadoresdeldia.cl/webservice/indicadores.json');
 $obj = json_decode($json);
@@ -45,7 +45,7 @@ echo 'Precio del euro: '.$obj->moneda->euro;
 echo 'UF: '.$obj->moneda->uf."\n";
 echo 'UTM: '.$obj->moneda->utm;
 echo 'IPC: '.$obj->moneda->ipc;
-}
+} */
 
 
 function datosAerodromo()
@@ -170,12 +170,99 @@ else
         <ul class="nav-menu">
           <li class="menu-active"><a href="#body">Home</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#" data-toggle="modal" data-target=".login-register-form">Iniciar sesión</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Iniciar sesión</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
 
     </div>
   </header><!-- #header -->
+  
+  <!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-user-plus mr-1"></i> Register</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <!--Panel 7-->
+                    <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                        <!--Body-->
+                        <div class="modal-body mb-1">
+					<p></p>
+					<label>Usuario</label>
+					<input type="text" id="usuario" class="form-control input-sm" name="">
+					<label>Password</label>
+					<input type="password" id="password" class="form-control input-sm" name="">
+					<p></p>
+                            <div class="text-center mt-2">
+                                <button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                            </div>
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                    <!--/.Panel 7-->
+
+                    <!--Panel 8-->
+                    <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                        <!--Body-->
+                        <div class="modal-body">
+                        
+							<form id="frmRegistro">
+					
+								<div class="form-group">
+									<label>Nombre :</label>
+									<input type="text" class="form-control input-sm" id="nombre" name="">
+									</div>
+					                <label>Apellido</label>
+									<input type="text" class="form-control input-sm" id="apellido" name="">
+									<label>Usuario</label>
+									<input type="text" class="form-control input-sm" id="usuario" name="">
+									<label>Password</label>
+									<input type="text" class="form-control input-sm" id="password" name="">
+									<p></p>
+									<div class="text-center form-sm mt-2">
+                                <button class="btn btn-info">Registrarse <i class="fa fa-sign-in ml-1"></i></button>
+                            </div>
+								</form>
+
+                            
+
+                        </div>
+                        <!--Footer-->
+                        <div class="modal-footer">
+                            
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"  data-target="panel7" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    <!--/.Panel 8-->
+                </div>
+
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login / Register Form-->
 
  
   
@@ -224,15 +311,25 @@ else
               <p class="description">El estado del Aire para hoy es: <?php estadoAire();?></p>
             </div>
           </div>
-		  
-		  <div class="container h-100">
-  <div class="row h-100 justify-content-center align-items-center">
-    <form class="col-12">
-      <p>Inicia sesion para conocer mas datos y personalizarlos</p>
-		  	<button type="submit" class="btn btn-primary">Iniciar sesion</button>
-    </form>   
-  </div>  
+		  <div class="col-lg-4">
+		  </div>
+		  <div class="col-lg-4">
+		  <p align="center">Inicia sesion para conocer mas datos y personalizarlos</p>
+			 <div class="col-lg-12">
+    <div class="row" style="justify-content:center;display:flex">
+        <div class="col-xs-12">
+            <button class="btn btn-primary btn-xs" type="button">Middle Button</button>
+        </div>
+    </div>
+	<div class="row"></div>
 </div>
+		  </div>
+			
+			<div class="col-lg-4">
+		  </div>
+		</div>
+		  
+		  
 		  
 
 
