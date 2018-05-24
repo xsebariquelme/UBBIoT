@@ -317,7 +317,7 @@ else
 			 <div class="col-lg-12">
     <div class="row" style="justify-content:center;display:flex">
         <div class="col-xs-12">
-            <button class="btn btn-primary btn-xs" type="button">Iniciar sesión</button>
+            <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalLRForm" type="button">Iniciar sesión</button>
         </div>
     </div>
 	<div class="row"></div>
