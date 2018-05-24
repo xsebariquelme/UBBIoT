@@ -168,7 +168,7 @@ else
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
+          <li class="menu-active"><a href="#body">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Iniciar sesión</a></li>
         </ul>
@@ -206,16 +206,16 @@ else
 					<p></p>
 					<label>Usuario</label>
 					<input type="text" id="usuario" class="form-control input-sm" name="">
-					<label>Password</label>
+					<label>Contraseña</label>
 					<input type="password" id="password" class="form-control input-sm" name="">
 					<p></p>
                             <div class="text-center mt-2">
-                                <button class="btn btn-info">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                                <button class="btn btn-info">Ingresar <i class="fa fa-sign-in ml-1"></i></button>
                             </div>
                         </div>
                         <!--Footer-->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
                         </div>
 
                     </div>
@@ -230,18 +230,18 @@ else
 							<form id="frmRegistro">
 					
 								<div class="form-group">
-									<label>Nombre :</label>
+									<label>Nombre</label>
 									<input type="text" class="form-control input-sm" id="nombre" name="">
 									</div>
 					                <label>Apellido</label>
 									<input type="text" class="form-control input-sm" id="apellido" name="">
 									<label>Usuario</label>
 									<input type="text" class="form-control input-sm" id="usuario" name="">
-									<label>Password</label>
+									<label>Contraseña</label>
 									<input type="text" class="form-control input-sm" id="password" name="">
 									<p></p>
 									<div class="text-center form-sm mt-2">
-                                <button class="btn btn-info">Registrarse <i class="fa fa-sign-in ml-1"></i></button>
+                                <button class="btn btn-info">Registrarse<i class="fa fa-sign-in ml-1"></i></button>
                             </div>
 								</form>
 
@@ -249,9 +249,8 @@ else
 
                         </div>
                         <!--Footer-->
-                        <div class="modal-footer">
-                            
-                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"  data-target="panel7" data-dismiss="modal">Close</button>
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"  data-target="panel7" data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                     <!--/.Panel 8-->
