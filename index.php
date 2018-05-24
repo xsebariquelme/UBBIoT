@@ -83,9 +83,9 @@ if(curl_errno($curl)) // check for execution errors
 }
 
 curl_close($curl);
-$regex = '/<h3 class="panel-title"> (.*) <small>/s';
+$regex = '/<h3 class="panel-title">(.*) /s';
 if ( preg_match($regex, $page, $list) )
-    echo strip_tags(substr($list[0], 0, strpos($list[0], '(')));
+    echo strip_tags(substr($list[0], 0, strpos($list[0], ' <small>')));
 else 
     print "Not found"; 
 }
