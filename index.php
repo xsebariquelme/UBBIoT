@@ -64,7 +64,7 @@ if(curl_errno($curl)) // check for execution errors
 curl_close($curl);
 $regex = '/<td class="temperatura" (.*) /s';
 if ( preg_match($regex, $page, $list) )
-	echo strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')));
+	echo "Temperatura actual: ".substr((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 0, strpos((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 'o'))."°C";
 else 
     print "Not found"; 
 }
@@ -308,7 +308,7 @@ else
             <div class="box wow fadeInRight">
 			<div class="icon"><i class="fa fa-cloud"></i></div>
               <h4 class="title"><a href="">Calidad del Aire</a></h4>
-              <p class="description">El estado del Aire para hoy es: <?php estadoAire();?></p>
+              <p class="description">El estado del Aire para hoy es: <?php estadoAire(); ?></p>
             </div>
           </div>
 		  <div class="col-lg-4">
@@ -360,11 +360,15 @@ DATOS EXTRA
 
       </div>
     </section><!-- #services -->
+	
   </main>
 
   <!--==========================
     Footer
   ============================-->
+  
+<audio src="lib/eltiempo.ogg" autoplay="true" controls preload="auto" autobuffer></audio>
+
   <footer id="footer">
     <div class="container">
       <div class="copyright">
@@ -398,9 +402,13 @@ DATOS EXTRA
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
-
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+    <style>
+    audio {
+    display:none;
+    }   
+    </style>
 </body>
 </html>
