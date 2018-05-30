@@ -174,7 +174,7 @@ else
           <li class="menu-active"><a href="#body">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Iniciar sesión</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#modalForm">Registrarse</a></li>
+          <li><a href="registrarse.php" >Registrarse</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
 
@@ -231,67 +231,6 @@ else
 </div>
 <!--Modal: Login / Register Form-->
 
-<!--Modal: Login / Register Form-->
-<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog cascading-modal" role="document">
-        <!--Content-->
-        <div class="modal-content">
-
-            <!--Modal cascading tabs-->
-            <div class="modal-c-tabs">
-
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-user-plus mr-1"></i>Registro</a>
-                    </li>
-                </ul>
-
-                <!-- Tab panels -->
-                <div class="tab-content">
-                    
-
-                    <!--Panel 8-->
-                    <div class="tab-pane fade in show active" id="panel8" role="tabpanel">
-
-                        <!--Body-->
-                        <div class="modal-body">
-                                        
-                              <form id="frmRegistro">
-                          
-                                <div class="form-group">
-                                  <label>Nombre</label>
-                                  <input type="text" class="form-control input-sm" id="nombre" name="">
-                                  </div>
-                                          <label>Apellido</label>
-                                  <input type="text" class="form-control input-sm" id="apellido" name="">
-                                  <label>Usuario</label>
-                                  <input type="text" class="form-control input-sm" id="usuario" name="">
-                                  <label>Contraseña</label>
-                                  <input type="text" class="form-control input-sm" id="password" name="">
-                                  <p></p>
-                                  <div class="text-center form-sm mt-2">
-                                                <button class="btn btn-info" id="registrarNuevo">Registrarse<i class="fa fa-sign-in ml-1"></i></button>
-                                            </div>
-                                </form>
-
-                            
-
-                        </div>
-                        <!--Footer-->
-                        <div class="modal-footer"> 
-                            <button type="button" class="btn btn-outline-info waves-effect ml-auto"  data-target="panel7" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                    <!--/.Panel 8-->
-                </div>
-
-            </div>
-        </div>
-        <!--/.Content-->
-    </div>
-</div>
-<!--Modal: Login / Register Form-->
 
 
  <script type="text/javascript">
@@ -301,12 +240,7 @@ else
 
   </script>
 
-   <script type="text/javascript">
-    $('#modalForm').on('hide.bs.modal', function () {
-      $('#modalForm').removeData();
-    })
 
-  </script>
 
 
   
@@ -489,50 +423,3 @@ DATOS EXTRA
 	});
 </script>
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#registrarNuevo').click(function(){
-
-			if($('#nombre').val()==""){
-				alertify.alert("Error","Debes agregar el nombre");
-				return false;
-			}else if($('#apellido').val()==""){
-				alertify.alert("Error","Debes agregar el apellido");
-				return false;
-			}else if($('#usuario').val()==""){
-				alertify.alert("Error","Debes agregar el usuario");
-				return false;
-			}else if($('#password').val()==""){
-				alertify.alert("Error","Debes agregar la contraseña");
-				return false;
-			}
-
-			cadena="nombre=" + $('#nombre').val() +
-					"&apellido=" + $('#apellido').val() +
-					"&usuario=" + $('#usuario').val() + 
-					"&password=" + $('#password').val();
-
-					$.ajax({
-						type:"POST",
-						url:"registro.php",
-						data:cadena,
-						success:function(r){
-
-							if(r==2){
-								alertify.alert("Este usuario ya existe, prueba con otro :)");
-							}
-							else if(r==1){
-								$('#frmRegistro')[0].reset();
-								alertify.success("Agregado con exito");
-                window.location="/UBBIoT/#";
-               
-               
-							}else{
-								alertify.error("Error","Fallo al agregar");
-							}
-						}
-					});
-		});
-	});
-		
-</script>
