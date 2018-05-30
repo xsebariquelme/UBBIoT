@@ -48,7 +48,7 @@ echo 'IPC: '.$obj->moneda->ipc;
 } */
 
 
-function datosAerodromo()
+/* function datosAerodromo()
 {
 $curl = curl_init('http://164.77.222.61/RedEmaNacional/php/VisorMMA.php?codigoNacional=360011');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
@@ -67,7 +67,7 @@ if ( preg_match($regex, $page, $list) )
 	echo "Temperatura actual: ".substr((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 0, strpos((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 'o'))."°C";
 else 
     print "Not found"; 
-}
+} */
 
 function estadoAire()
 {
@@ -344,8 +344,8 @@ else
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa fa-thermometer-half"></i></div>
-              <h4 class="title"><a href="">Datos Meteorologicos</a></h4>
-              <p class="description"> <?php datosAerodromo();?></p>
+              <h4 class="title"><a href="">Temperatura actual</a></h4>
+              <p class="description"> 5°C</p>
             </div>
           </div>
 		  <div class="col-lg-6">
