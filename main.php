@@ -50,7 +50,7 @@
                     </ul>
 					
 				    <!-- Logo -->
-                    <ul class="navbar-nav"><a class="navbar-brand" href="index.php">
+                    <ul class="navbar-nav"><a class="navbar-brand" href="/UBBIoT/#">
                         <!-- Logo icon -->
                         <b><img src="assets/images/ubbiot.png" alt="homepage" class="dark-logo" /></b>
                         <!--End Logo icon -->
@@ -68,7 +68,7 @@
                                 <ul class="dropdown-user">
                                     <li><a href="#"><i class="ti-user"></i> Perfil</a></li>
                                    
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
+                                    <li><a href="salir.php"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
                                 </ul>
                             </div>
                         </li>
