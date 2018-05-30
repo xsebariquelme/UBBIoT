@@ -37,7 +37,7 @@
 					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
 					</form>
 					<div style="text-align: right;">
-						<a href="index.php" class="btn btn-secondary">Login</a>
+						<a href="index.php" class="btn btn-secondary">Inicio</a>
 					</div>
 				</div>
 			</div>
