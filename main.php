@@ -122,7 +122,12 @@
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
-                <div class="row">
+                <a class="weatherwidget-io" href="https://forecast7.com/es/n36d61n72d10/chillan/" data-label_1="Chillán" data-label_2="El tiempo" data-font="Roboto" data-icons="Climacons Animated" data-theme="weather_one" >Chillán El tiempo</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+				<div class="row">
+				
                     <div class="col-md-3">
                         <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -191,29 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card bg-pink p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-shine f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">- °C</h2>
-                                    <p class="m-b-0">Temperatura actual</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                  
                 </div>
-				
-				
-				
-				
-
-                
-
 
                 <!-- End PAge Content -->
             </div>
