@@ -11,21 +11,21 @@
 <link rel="stylesheet" type="text/css" href="css/alertifyjs/css/themes/default.css">
 <link rel="stylesheet" type="text/css" href="css/alertifyjs/css/alertify.css">
 </head>
-<body style="background-color: lightblue">
+<body>
 <br><br><br>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
-			<div class="jumbotron">
-				<div class="panel panel-heading">Registro de usuario</div>
+			<div class="jumbotron" style="padding-top: 1rem;padding-bottom: 1rem;">
+				<div class="panel panel-heading"><b><center>Registro de usuario</center></b></div>
+				<br>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
 					
 					<div class="form-group">
-					<label>Nombre :</label>
+					<label>Nombre</label>
 					<input type="text" class="form-control input-sm" id="nombre" name="">
-					</div>
 					
 					<label>Apellido</label>
 					<input type="text" class="form-control input-sm" id="apellido" name="">
@@ -35,6 +35,7 @@
 					<input type="text" class="form-control input-sm" id="password" name="">
 					<p></p>
 					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
+					</div>
 					</form>
 					<div style="text-align: right;">
 						<a href="index.php" class="btn btn-secondary">Inicio</a>
@@ -85,7 +86,7 @@
 							else if(r==1){
 								$('#frmRegistro')[0].reset();
 								alertify.success("Agregado con exito");
-									setTimeout("redireccionarPagina()", 1000);
+									setTimeout("redireccionarPagina()", 300);
 							}else{
 								alertify.error("Error","Fallo al agregar");
 							}
@@ -101,4 +102,13 @@
 	
 	
 </script>
-
+<style>
+body {
+    width: 100%;
+    height: 400px;
+    background-image: url('img/ubb.jpg');
+    background-size: cover;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+}
+</style>
