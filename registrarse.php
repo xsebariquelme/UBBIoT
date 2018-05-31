@@ -38,7 +38,7 @@
 					</div>
 					</form>
 					<div style="text-align: right;">
-						<a href="index.php" class="btn btn-secondary">Inicio</a>
+						<a href="index.php" class="btn btn-secondary">Volver</a>
 					</div>
 				</div>
 			</div>
