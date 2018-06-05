@@ -50,7 +50,7 @@
                     </ul>
 					
 				    <!-- Logo -->
-                    <ul class="navbar-nav"><a class="navbar-brand" href="/UBBIoT/#">
+                    <ul class="navbar-nav"><a class="navbar-brand" >
                         <!-- Logo icon -->
                         <b><img src="assets/images/ubbiot.png" alt="homepage" class="dark-logo" /></b>
                         <!--End Logo icon -->

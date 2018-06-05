@@ -50,9 +50,10 @@ echo 'IPC: '.$obj->moneda->ipc;
 
 /* function datosAerodromo()
 {
-$curl = curl_init('http://164.77.222.61/RedEmaNacional/php/VisorMMA.php?codigoNacional=360011');
+$curl = curl_init('https://climatologia.meteochile.gob.cl/application/productos/recienteEma/360011');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
 $page = curl_exec($curl);
 
 if(curl_errno($curl)) // check for execution errors
@@ -62,12 +63,12 @@ if(curl_errno($curl)) // check for execution errors
 }
 
 curl_close($curl);
-$regex = '/<td class="temperatura" (.*) /s';
+$regex = '/ (.*) /s';
 if ( preg_match($regex, $page, $list) )
-	echo "Temperatura actual: ".substr((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 0, strpos((strip_tags(substr($list[0], 0, strpos($list[0], 'Temperaturas')))), 'o'))."°C";
+	echo strip_tags(substr($list[0], 0, strpos($list[0], '</h1>'))); 
 else 
     print "Not found"; 
-} */
+}  */ 
 
 function estadoAire()
 {
@@ -216,7 +217,7 @@ else
 									  <input type="password" id="passwordL" class="form-control input-sm" name="">
 									  <p></p>
 								<div class="text-center mt-2">
-									  <button class="btn btn-info" id="entrarSistema">Ingresar<i class="fa fa-sign-in ml-1"></i></button>
+									  <button type="submit" class="btn btn-info" id="entrarSistema" >Ingresar<i class="fa fa-sign-in ml-1"></i></button>
 									</div> 
 								</div>
 								<!--Footer-->

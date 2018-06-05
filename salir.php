@@ -4,6 +4,6 @@
 
 	unset($_SESSION['user']);
 
-	header("location:../UBBIoT/#");
+	header("Refresh:0; url=index.php");
 
  ?>
