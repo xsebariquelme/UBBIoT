@@ -87,19 +87,19 @@
                         <li class="nav-devider"></li>
                         <li class="nav-label">Menú</li>
                         
-                        <li> <a class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
+                        <li> <a onClick="cargar('divD',1);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
-						<li> <a class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
+						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
                             
                         </li>
-						<li> <a class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
+						<li> <a onClick="cargar('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
                             
                         </li>
-						<li> <a class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Santoral </span></a>
+						<li> <a onClick="cargar('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Santoral </span></a>
                             
                         </li>
-						<li> <a class="" href="#" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Feriados</span></a>
+						<li> <a onClick="cargar('divD',5);" class="" href="#" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Feriados</span></a>
                             
                         </li>
                         
@@ -123,10 +123,10 @@
             <div class="container-fluid">
                 <!-- Start Page Content -->
                 <a class="weatherwidget-io" href="https://forecast7.com/es/n36d61n72d10/chillan/" data-label_1="Chillán" data-label_2="El tiempo" data-font="Roboto" data-icons="Climacons Animated" data-theme="weather_one" >Chillán El tiempo</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-				<div class="row">
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+				<div class="row" id="content" >
 				
                     <div class="col-md-3">
                         <div class="card bg-primary p-20">
@@ -180,9 +180,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-				
-				<div class="row">
+               
                     <div class="col-md-3">
                         <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -196,8 +194,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                 </div>
                 <!-- End PAge Content -->
             </div>
             <!-- End Container fluid  -->
@@ -218,6 +215,13 @@
     <!--stickey kit -->
     <script src="assets/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 
+    <!--cargar div1 -->
+   <script type="text/Javascript" >
+    function cargar(a,b){
+	$('#content').html('<img src="lo.gif">');
+	$('#content').load(a+'.php',{b:b});
+    }	
+    </script>
 
     <script src="assets/js/lib/datamap/d3.min.js"></script>
     <script src="assets/js/lib/datamap/topojson.js"></script>
