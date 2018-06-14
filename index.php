@@ -159,7 +159,7 @@ else
   ======================================================= -->
 </head>
 
-<body id="body">
+<body id="body" onload="noback();">
 
   <!--==========================
     Header
@@ -210,7 +210,8 @@ else
 
 								<!--Body-->
 								<div class="modal-body mb-1">
-									  <p></p>
+									  <form>
+                    <p></p>
 									  <label>Usuario</label>
 									  <input type="text" id="usuarioL" class="form-control input-sm" name="">
 									  <label>Contraseña</label>
@@ -220,6 +221,7 @@ else
 									  <button type="submit" class="btn btn-info" id="entrarSistema" >Ingresar<i class="fa fa-sign-in ml-1"></i></button>
 									</div> 
 								</div>
+                </form>
 								<!--Footer-->
 								<div class="modal-footer">
 									<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Cerrar</button>
@@ -390,15 +392,7 @@ DATOS EXTRA
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
-    <style>
-    audio {
-    display:none;
-    }   
-    </style>
-</body>
-</html>
-
-<script type="text/javascript">
+  <script type="text/javascript">
 	$(document).ready(function(){
 		$('#entrarSistema').click(function(){
 			if($('#usuarioL').val()==""){
@@ -428,3 +422,20 @@ DATOS EXTRA
 	});
 </script>
 
+<script>
+  function noback(){
+   window.location.hash="no-back-button";
+   window.location.hash="Again-No-back-button"
+   window.onhashchange=function(){window.location.hash="no-back-button";}
+}
+</script>
+
+
+
+    <style>
+    audio {
+    display:none;
+    }   
+    </style>
+</body>
+</html>

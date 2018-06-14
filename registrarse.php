@@ -23,24 +23,25 @@
 				<div class="panel panel-body">
 					<form id="frmRegistro">
 					
-					<div class="form-group">
-					<label>Nombre</label>
-					<input type="text" class="form-control input-sm" id="nombre" name="">
-					
-					<label>Apellido</label>
-					<input type="text" class="form-control input-sm" id="apellido" name="">
-					<label>Usuario</label>
-					<input type="text" class="form-control input-sm" id="usuario" name="">
-					<label>Password</label>
-					<input type="text" class="form-control input-sm" id="password" name="">
-					<p></p>
-					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
-					</div>
-					</form>
+						<div class="form-group">
+							<label>Nombre</label>
+							<input type="text" class="form-control input-sm" id="nombre" name="">
+							
+							<label>Apellido</label>
+							<input type="text" class="form-control input-sm" id="apellido" name="">
+							<label>Usuario</label>
+							<input type="text" class="form-control input-sm" id="usuario" name="">
+							<label>Password</label>
+							<input type="password" class="form-control input-sm" id="password" name="">
+							<p></p>
+							
+							<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
+						 </div>
+					 </form>
 					<div style="text-align: right;">
 						<a href="index.php" class="btn btn-secondary">Volver</a>
 					</div>
-				</div>
+				 </div>
 			</div>
 		</div>
 		<div class="col-sm-4"></div>

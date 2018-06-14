@@ -1,3 +1,6 @@
+<?php
+session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -66,7 +69,10 @@
                             <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/user.jpg" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="#"><i class="ti-user"></i> Perfil</a></li>
+                                    <li><a href="#"><i class="ti-user"></i><?php
+                                    echo "<br>".$_SESSION['nombre'] ."<br>"; 
+                                    echo "<br>".$_SESSION['apellido'] ."<br>";
+                                    ?> Perfil</a></li>
                                    
                                     <li><a href="salir.php"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
                                 </ul>
@@ -75,7 +81,7 @@
                     </ul>
                 </div>
             </nav>
-        </div>
+         </div>
         <!-- End header header -->
         <!-- Left Sidebar  -->
         <div class="left-sidebar">
@@ -87,28 +93,28 @@
                         <li class="nav-devider"></li>
                         <li class="nav-label">Menú</li>
                         
-                        <li> <a onClick="cargar('divD',1);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
+                        <li> <a onClick="cargar2('portada',1);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
 						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
                             
                         </li>
-						<li> <a onClick="cargar('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
+						<li> <a onClick="cargar2('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
                             
                         </li>
-						<li> <a onClick="cargar('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Santoral </span></a>
+						<li> <a onClick="cargar2('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Santoral </span></a>
                             
                         </li>
-						<li> <a onClick="cargar('divD',5);" class="" href="#" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Feriados</span></a>
+						<li> <a onClick="cargar2('divD',5);" class="" href="#" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Feriados</span></a>
                             
                         </li>
                         
                     </ul>
-                </nav>
+                 </nav>
                 <!-- End Sidebar navigation -->
-            </div>
+             </div>
             <!-- End Sidebar scroll-->
-        </div>
+         </div>
         <!-- End Left Sidebar  -->
         <!-- Page wrapper  -->
         <div class="page-wrapper">
@@ -120,89 +126,14 @@
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
-            <div class="container-fluid">
-                <!-- Start Page Content -->
-                <a class="weatherwidget-io" href="https://forecast7.com/es/n36d61n72d10/chillan/" data-label_1="Chillán" data-label_2="El tiempo" data-font="Roboto" data-icons="Climacons Animated" data-theme="weather_one" >Chillán El tiempo</a>
-                <script>
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-                </script>
-				<div class="row" id="content" >
-				
-                    <div class="col-md-3">
-                        <div class="card bg-primary p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-alert f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">-</h2>
-                                    <p class="m-b-0">Alerta Volcán</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-pink p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-user f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">-</h2>
-                                    <p class="m-b-0">Santoral de hoy</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-money f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">$-</h2>
-                                    <p class="m-b-0">Dolar hoy</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card bg-danger p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-face-smile f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">-</h2>
-                                    <p class="m-b-0">Feriado cercano</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               
-                    <div class="col-md-3">
-                        <div class="card bg-primary p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-cloud f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white">-</h2>
-                                    <p class="m-b-0">Calidad del aire</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-                <!-- End PAge Content -->
-            </div>
-            <!-- End Container fluid  -->
-            
-        </div>
-        <!-- End Page wrapper  -->
-    </div>
-    <!-- End Wrapper -->
+            <div class="container-fluid" id="contentf">
+           <!-- End Container fluid  -->
+           </div>
+      
+         <!-- End Page wrapper  -->
+         </div>
+     <!-- End Wrapper -->
+     </div>
     <!-- All Jquery -->
     <script src="assets/js/lib/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
@@ -215,12 +146,23 @@
     <!--stickey kit -->
     <script src="assets/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
 
-    <!--cargar div1 -->
+    <!--cargar cargar 1 -->
    <script type="text/Javascript" >
     function cargar(a,b){
-	$('#content').html('<img src="lo.gif">');
-	$('#content').load(a+'.php',{b:b});
+	$('#contentf').html('<img src="lo.gif">');
+	$('#contentf').load(a+'.php',{b:b});
     }	
+    </script>
+    <!--cargar 2-->
+    <script type="text/Javascript" >
+    function cargar2(a,b){
+	$('#contentf').html('<img src="lo.gif">');
+	$('#contentf').load(a+'.php',{b:b});
+    }	
+
+    $(document).ready(function(){
+        cargar2('portada',null);
+    })
     </script>
 
     <script src="assets/js/lib/datamap/d3.min.js"></script>
@@ -240,6 +182,6 @@
     <!--Custom JavaScript -->
     <script src="assets/js/scripts.js"></script>
 
-</body>
+ </body>
 
-</html>
+ </html>

@@ -1,7 +1,7 @@
 
 
 <?php if($_REQUEST['b']==5) : ?>
-
+<div class="row">
                     <div class="col-md-3">
                         <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -68,11 +68,11 @@
                          </div>
                      </div>
 
-
+</div>
 
 <?php elseif($_REQUEST['b']==4) : ?>
-  
-  <div class="col-md-3">
+<div class="row">
+                        <div class="col-md-3">
                         <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
@@ -124,10 +124,10 @@
                              </div>
                          </div>
                      </div>
-
+</div>
 
 <?php elseif($_REQUEST['b']==3) : ?>
-
+<div class="row">
                     <div class="col-md-3">
                     <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -168,11 +168,13 @@
                          </div>
                      </div>
 
-
+<div>
 
 
 <?php elseif($_REQUEST['b']==2) : ?>
 
+   <a class="weatherwidget-io" href="https://forecast7.com/es/n36d61n72d10/chillan/" data-label_1="Chillán" data-label_2="El tiempo" data-font="Roboto" data-icons="Climacons Animated" data-theme="weather_one">Chillán El tiempo</a>
+   <div class="row">
                     <div class="col-lg">
                     <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -199,8 +201,14 @@
                              </div>
                          </div>
                      </div>
+</div>
+                       <script src="https://weatherwidget.io/js/widget.min.js"></script>
 
 <?php elseif($_REQUEST['b']==1) : ?>
+
+      <a class="weatherwidget-io" href="https://forecast7.com/es/n36d61n72d10/chillan/" data-label_1="Chillán" data-label_2="El tiempo" data-font="Roboto" data-icons="Climacons Animated" data-theme="weather_one">Chillán El tiempo</a>
+              
+      <div class="row">
                     <div class="col-md-3">
                         <div class="card bg-primary p-20">
                             <div class="media widget-ten">
@@ -267,7 +275,11 @@
                             </div>
                         </div>
                     </div>
+</div>
+                   
+                    <script src="https://weatherwidget.io/js/widget.min.js"></script>
+
 
 <?php else : ?>
-   no hay contenido del row
+   no hay contenido para el div
 <?php endif; ?>
