@@ -8,13 +8,26 @@
 $conexion=conexion();
 
 /*UPDATE MONEDA*/
-$json = file_get_contents('http://indicadoresdeldia.cl/webservice/indicadores.json');
-$obj = json_decode($json);
-$precioDolar = $obj->moneda->dolar;
-$precioEuro = $obj->moneda->euro;
-$precioUF = $obj->moneda->uf;
-$precioUTM = $obj->moneda->utm;
-$precioIPC = $obj->moneda->ipc;
+$json = file_get_contents('https://api.sbif.cl/api-sbifv3/recursos_api/dolar?apikey=88a1ee894461c2137af4b252ce6bdd30c91a2294&formato=json');
+$dolar = json_decode($json);
+
+$jsoneuro = file_get_contents('https://api.sbif.cl/api-sbifv3/recursos_api/euro?apikey=88a1ee894461c2137af4b252ce6bdd30c91a2294&formato=json');
+$euro = json_decode($jsoneuro);
+
+$jsonipc = file_get_contents('https://api.sbif.cl/api-sbifv3/recursos_api/ipc?apikey=88a1ee894461c2137af4b252ce6bdd30c91a2294&formato=json');
+$ipc = json_decode($jsonipc);
+
+$jsonutm = file_get_contents('https://api.sbif.cl/api-sbifv3/recursos_api/utm?apikey=88a1ee894461c2137af4b252ce6bdd30c91a2294&formato=json');
+$utm = json_decode($jsonutm);
+
+$jsonuf = file_get_contents('https://api.sbif.cl/api-sbifv3/recursos_api/uf?apikey=88a1ee894461c2137af4b252ce6bdd30c91a2294&formato=json');
+$uf = json_decode($jsonuf);
+
+$precioDolar = $dolar->Dolares[0]->Valor;
+$precioEuro = $euro->Euros[0]->Valor;
+$precioUF = $uf->UFs[0]->Valor;
+$precioUTM = $utm->UTMs[0]->Valor;
+$precioIPC = $ipc->IPCs[0]->Valor;
 
 $sql="UPDATE economicos SET dolar='$precioDolar',euro='$precioEuro',uf='$precioUF',utm='$precioUTM',ipc='$precioIPC' WHERE id =1";
 $result=mysqli_query($conexion,$sql);
