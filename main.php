@@ -1,5 +1,14 @@
 <?php
-session_start(); ?>
+session_start(); 
+
+$session_value=(isset($_SESSION['sen_term']))?$_SESSION['sen_term']:'';
+$session_value2=(isset($_SESSION['temp_max']))?$_SESSION['temp_max']:'';
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -55,7 +64,7 @@ session_start(); ?>
 				    <!-- Logo -->
                     <ul class="navbar-nav"><a class="navbar-brand" >
                         <!-- Logo icon -->
-                        <b><img src="assets/images/ubbiot.png" alt="homepage" class="dark-logo" /></b>
+                        <b><img src="assets/images/ubbiot.png" alt="homepage"  class="center"class="dark-logo" /></b>
                         <!--End Logo icon -->
                         
                     </a>
@@ -70,8 +79,10 @@ session_start(); ?>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
                                     <li><a href="#"><i class="ti-user"></i><?php
-                                    echo "<br>".$_SESSION['nombre'] ."<br>"; 
-                                    echo "<br>".$_SESSION['apellido'] ."<br>";
+                                    echo "<br>".$_SESSION['nombre'] ." "; 
+                                    echo $_SESSION['apellido'] ."<br>";
+                                    echo $_SESSION['sen_term'] ."<br>";
+                                    echo $_SESSION['temp_max'] ."<br>";
                                     ?> Perfil</a></li>
                                    
                                     <li><a href="salir.php"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
@@ -93,7 +104,7 @@ session_start(); ?>
                         <li class="nav-devider"></li>
                         <li class="nav-label">Menú</li>
                         
-                        <li> <a onClick="cargar2('portada',1);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
+                        <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
 						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
@@ -155,15 +166,22 @@ session_start(); ?>
     </script>
     <!--cargar 2-->
     <script type="text/Javascript" >
-    function cargar2(a,b){
+    var myvar='<?php echo $session_value;?>';
+    console.log(myvar);
+
+     var myvar2='<?php echo $session_value2;?>';
+    console.log(myvar2);
+
+    function cargar2(a,b,c){
 	$('#contentf').html('<img src="lo.gif">');
-	$('#contentf').load(a+'.php',{b:b});
+	$('#contentf').load(a+'.php',{b:b,c:c});
     }	
 
     $(document).ready(function(){
-        cargar2('portada',null);
+        cargar2('portada',myvar,myvar2);
     })
     </script>
+    
 
     <script src="assets/js/lib/datamap/d3.min.js"></script>
     <script src="assets/js/lib/datamap/topojson.js"></script>

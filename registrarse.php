@@ -15,36 +15,60 @@
 <br><br><br>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4">
+		
+		<div class="col-lg">
 			<div class="jumbotron" style="padding-top: 1rem;padding-bottom: 1rem;">
 				<div class="panel panel-heading"><b><center>Registro de usuario</center></b></div>
 				<br>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
-					
-						<div class="form-group">
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
 							<label>Nombre</label>
-							<input type="text" class="form-control input-sm" id="nombre" name="">
-							
+							<input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+							</div>
+							<div class="form-group col-md-6">
 							<label>Apellido</label>
-							<input type="text" class="form-control input-sm" id="apellido" name="">
+							<input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
 							<label>Usuario</label>
-							<input type="text" class="form-control input-sm" id="usuario" name="">
-							<label>Password</label>
-							<input type="password" class="form-control input-sm" id="password" name="">
+							<input type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario">
+							</div>
+							<div class="form-group col-md-6">
+							<label for="inputPassword4">Contraseña</label>
+							<input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+							</div>
+						</div>
+
+				        <div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="sen_term">
+							<label class="form-check-label" >Sensación Térmica</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="temp_max">
+							<label class="form-check-label" >Temperatura máxima</label>
+						</div>
+
 							<p></p>
-							
-							<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
-						 </div>
+							<div style="text-align: center;" >
+							<span class="btn btn-primary"  id="registrarNuevo" >Registrar</span>
+                            </div>
+							<p></p>
+							<div style="text-align: center;">
+						      <a href="index.php" class="btn btn-secondary">Volver</a>
+					        </div>
+						 
 					 </form>
-					<div style="text-align: right;">
-						<a href="index.php" class="btn btn-secondary">Volver</a>
-					</div>
+					
 				 </div>
 			</div>
 		</div>
-		<div class="col-sm-4"></div>
+		
 	</div>
 </div>
 <script src="js/jquery-3.3.1.js"></script>
@@ -70,11 +94,16 @@
 				return false;
 			}
 
+			console.log($('#sen_term').is(':checked'));
+            console.log($('#temp_max').is(':checked'));
+
 			cadena="nombre=" + $('#nombre').val() +
 					"&apellido=" + $('#apellido').val() +
 					"&usuario=" + $('#usuario').val() + 
-					"&password=" + $('#password').val();
-
+					"&password=" + $('#password').val()+
+					"&sen_term=" + $('#sen_term').is(':checked')+
+					"&temp_max=" + $('#temp_max').is(':checked');
+					
 					$.ajax({
 						type:"POST",
 						url:"registro.php",
@@ -87,7 +116,7 @@
 							else if(r==1){
 								$('#frmRegistro')[0].reset();
 								alertify.success("Agregado con exito");
-									setTimeout("redireccionarPagina()", 300);
+									setTimeout("redireccionarPagina()",1);
 							}else{
 								alertify.error("Error","Fallo al agregar");
 							}
