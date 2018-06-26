@@ -4,6 +4,27 @@ session_start();
 $session_value=(isset($_SESSION['sen_term']))?$_SESSION['sen_term']:'';
 $session_value2=(isset($_SESSION['temp_max']))?$_SESSION['temp_max']:'';
 
+$session_value3=(isset($_SESSION['temp_min']))?$_SESSION['temp_min']:'';
+$session_value4=(isset($_SESSION['est_act']))?$_SESSION['est_act']:'';
+$session_value5=(isset($_SESSION['viento']))?$_SESSION['viento']:'';
+$session_value6=(isset($_SESSION['lluv_ca']))?$_SESSION['lluv_ca']:'';
+$session_value7=(isset($_SESSION['presion']))?$_SESSION['presion']:'';
+$session_value8=(isset($_SESSION['humedad']))?$_SESSION['humedad']:'';
+$session_value9=(isset($_SESSION['alert_vol']))?$_SESSION['alert_vol']:'';
+$session_value10=(isset($_SESSION['est_aire']))?$_SESSION['est_aire']:'';
+
+$session_value11=(isset($_SESSION['dolar']))?$_SESSION['dolar']:'';
+$session_value12=(isset($_SESSION['euro']))?$_SESSION['euro']:'';
+$session_value13=(isset($_SESSION['uf']))?$_SESSION['uf']:'';
+$session_value14=(isset($_SESSION['utm']))?$_SESSION['utm']:'';
+$session_value15=(isset($_SESSION['ipc']))?$_SESSION['ipc']:'';
+
+$session_value16=(isset($_SESSION['santoral']))?$_SESSION['santoral']:'';
+$session_value17=(isset($_SESSION['l_sismo']))?$_SESSION['l_sismo']:'';
+$session_value18=(isset($_SESSION['mag_sis']))?$_SESSION['mag_sis']:'';
+
+$session_value19=(isset($_SESSION['feriado']))?$_SESSION['feriado']:'';
+$session_value20=(isset($_SESSION['fferiado']))?$_SESSION['fferiado']:'';
 
 
 ?>
@@ -81,8 +102,6 @@ $session_value2=(isset($_SESSION['temp_max']))?$_SESSION['temp_max']:'';
                                     <li><a href="#"><i class="ti-user"></i><?php
                                     echo "<br>".$_SESSION['nombre'] ." "; 
                                     echo $_SESSION['apellido'] ."<br>";
-                                    echo $_SESSION['sen_term'] ."<br>";
-                                    echo $_SESSION['temp_max'] ."<br>";
                                     ?> Perfil</a></li>
                                    
                                     <li><a href="salir.php"><i class="fa fa-power-off"></i> Cerrar Sesión</a></li>
@@ -104,7 +123,7 @@ $session_value2=(isset($_SESSION['temp_max']))?$_SESSION['temp_max']:'';
                         <li class="nav-devider"></li>
                         <li class="nav-label">Menú</li>
                         
-                        <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>);"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
+                        <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>,<?php echo $session_value3;?>, <?php echo $session_value4;?>, <?php echo $session_value5;?>, <?php echo $session_value6;?>, <?php echo $session_value7;?>, <?php echo $session_value8;?>, <?php echo $session_value9;?>, <?php echo $session_value10;?>, <?php echo $session_value11;?>, <?php echo $session_value12;?>, <?php echo $session_value13;?>, <?php echo $session_value14;?>, <?php echo $session_value15;?>, <?php echo $session_value16;?>, <?php echo $session_value17;?>, <?php echo $session_value18;?>, <?php echo $session_value19;?>, <?php echo $session_value20;?> );"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
 						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
@@ -167,18 +186,39 @@ $session_value2=(isset($_SESSION['temp_max']))?$_SESSION['temp_max']:'';
     <!--cargar 2-->
     <script type="text/Javascript" >
     var myvar='<?php echo $session_value;?>';
-    console.log(myvar);
+    var myvar2='<?php echo $session_value2;?>';
 
-     var myvar2='<?php echo $session_value2;?>';
-    console.log(myvar2);
+    var myvar3='<?php echo $session_value3;?>';
+    var myvar4='<?php echo $session_value4;?>';
+    var myvar5='<?php echo $session_value5;?>';
+    var myvar6='<?php echo $session_value6;?>';
+    var myvar7='<?php echo $session_value7;?>';
+    var myvar8='<?php echo $session_value8;?>';
+    var myvar9='<?php echo $session_value9;?>';
+    var myvar10='<?php echo $session_value10;?>';
 
-    function cargar2(a,b,c){
+    var myvar11='<?php echo $session_value11;?>';
+    var myvar12='<?php echo $session_value12;?>';
+    var myvar13='<?php echo $session_value13;?>';
+    var myvar14='<?php echo $session_value14;?>';
+    var myvar15='<?php echo $session_value15;?>';
+
+    var myvar16='<?php echo $session_value16;?>';
+    var myvar17='<?php echo $session_value17;?>';
+    var myvar18='<?php echo $session_value18;?>';
+
+    var myvar19='<?php echo $session_value19;?>';
+    var myvar20='<?php echo $session_value20;?>';
+
+
+
+    function cargar2(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u){
 	$('#contentf').html('<img src="lo.gif">');
-	$('#contentf').load(a+'.php',{b:b,c:c});
+	$('#contentf').load(a+'.php',{b:b,c:c,d:d,e:e,f:f,g:g,h:h,i:i,j:j,k:k,l:l,m:m,n:n,o:o,p:p,q:q,r:r,s:s,t:t,u:u});
     }	
 
     $(document).ready(function(){
-        cargar2('portada',myvar,myvar2);
+        cargar2('portada',myvar,myvar2,myvar3,myvar4,myvar5,myvar6,myvar7,myvar8,myvar9,myvar10,myvar11,myvar12,myvar13,myvar14,myvar15,myvar16,myvar17,myvar18,myvar19,myvar20);
     })
     </script>
     

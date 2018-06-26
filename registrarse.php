@@ -18,7 +18,7 @@
 		
 		<div class="col-lg">
 			<div class="jumbotron" style="padding-top: 1rem;padding-bottom: 1rem;">
-				<div class="panel panel-heading"><b><center>Registro de usuario</center></b></div>
+				<div class="panel panel-heading"><h1><center>Registro de usuario</center></h1></div>
 				<br>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
@@ -44,7 +44,7 @@
 							<input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
 							</div>
 						</div>
-
+						<h3>Seleccione sus preferencias</h3>  
 				        <div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" id="sen_term">
 							<label class="form-check-label" >Sensación Térmica</label>
@@ -53,6 +53,97 @@
 							<input class="form-check-input" type="checkbox"  id="temp_max">
 							<label class="form-check-label" >Temperatura máxima</label>
 						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="temp_min">
+							<label class="form-check-label" >Temperatura minima</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="est_act">
+							<label class="form-check-label" >Estado Actual</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="viento">
+							<label class="form-check-label" >Velocidad viento</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="lluv_ca">
+							<label class="form-check-label" >Lluvia caida</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="presion">
+							<label class="form-check-label" >Presion</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="humedad">
+							<label class="form-check-label" >Humedad</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="alert_vol">
+							<label class="form-check-label" >Alerta Volcan</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="est_aire">
+							<label class="form-check-label" >Estado aire</label>
+						</div>
+				
+				  
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="dolar">
+							<label class="form-check-label" >Dolar</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="euro">
+							<label class="form-check-label" >Euro</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="uf">
+							<label class="form-check-label" >UF</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="utm">
+							<label class="form-check-label" >UTM</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="ipc">
+							<label class="form-check-label" >IPC</label>
+						</div>
+					
+
+
+					 
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="santoral">
+							<label class="form-check-label" >Santoral</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="l_sismo">
+							<label class="form-check-label" >Lugar sismo</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="mag_sis">
+							<label class="form-check-label" >Magnitud sismo</label>
+						</div>
+
+						
+					
+
+					
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="feriado">
+							<label class="form-check-label" >Nombre del Feriado cercano</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox"  id="fferiado">
+							<label class="form-check-label" >Fecha del feriado</label>
+						</div>
+					
 
 							<p></p>
 							<div style="text-align: center;" >
@@ -94,15 +185,32 @@
 				return false;
 			}
 
-			console.log($('#sen_term').is(':checked'));
-            console.log($('#temp_max').is(':checked'));
 
 			cadena="nombre=" + $('#nombre').val() +
 					"&apellido=" + $('#apellido').val() +
 					"&usuario=" + $('#usuario').val() + 
 					"&password=" + $('#password').val()+
 					"&sen_term=" + $('#sen_term').is(':checked')+
-					"&temp_max=" + $('#temp_max').is(':checked');
+					"&temp_max=" + $('#temp_max').is(':checked')+
+					"&temp_min=" + $('#temp_min').is(':checked')+
+					"&est_act=" + $('#est_act').is(':checked')+
+					"&viento=" + $('#viento').is(':checked')+
+					"&lluv_ca=" + $('#lluv_ca').is(':checked')+
+					"&presion=" + $('#presion').is(':checked')+
+					"&humedad=" + $('#humedad').is(':checked')+
+					"&alert_vol=" + $('#alert_vol').is(':checked')+
+					"&est_aire=" + $('#est_aire').is(':checked')+
+					"&dolar=" + $('#dolar').is(':checked')+
+					"&euro=" + $('#euro').is(':checked')+
+					"&uf=" + $('#uf').is(':checked')+
+					"&utm=" + $('#utm').is(':checked')+
+					"&ipc=" + $('#ipc').is(':checked')+
+					"&santoral=" + $('#santoral').is(':checked')+
+					"&l_sismo=" + $('#l_sismo').is(':checked')+
+					"&mag_sis=" + $('#mag_sis').is(':checked')+
+					"&feriado=" + $('#feriado').is(':checked')+
+					"&fferiado=" + $('#fferiado').is(':checked');
+
 					
 					$.ajax({
 						type:"POST",

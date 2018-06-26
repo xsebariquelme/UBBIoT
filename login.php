@@ -23,6 +23,45 @@
 			$temp_max = $row["temp_max"];
 			$_SESSION['temp_max'] = $temp_max;
 
+			$temp_min = $row["temp_min"];
+			$_SESSION['temp_min'] = $temp_min;
+			$est_act = $row["est_act"];
+		    $_SESSION['est_act'] = $est_act;
+			$viento = $row["viento"];
+			$_SESSION['viento'] = $viento;
+			$lluv_ca = $row["lluv_ca"];
+			$_SESSION['lluv_ca'] = $lluv_ca;
+			$presion = $row["presion"];
+			$_SESSION['presion'] = $presion;
+			$humedad = $row["humedad"];
+			$_SESSION['humedad'] = $humedad;
+			$alert_vol = $row["alert_vol"];
+			$_SESSION['alert_vol'] = $alert_vol;
+			$est_aire = $row["est_aire"];
+			$_SESSION['est_aire'] = $est_aire;
+
+			$dolar = $row["dolar"];
+			$_SESSION['dolar'] = $dolar;
+			$euro = $row["euro"];
+			$_SESSION['euro'] = $euro;
+			$uf = $row["uf"];
+			$_SESSION['uf'] = $uf;
+			$utm = $row["utm"];
+			$_SESSION['utm'] = $utm;
+			$ipc = $row["ipc"];
+			$_SESSION['ipc'] = $ipc;
+
+			$santoral = $row["santoral"];
+			$_SESSION['santoral'] = $santoral;
+			$l_sismo = $row["l_sismo"];
+			$_SESSION['l_sismo'] = $l_sismo;
+			$mag_sis = $row["mag_sis"];
+			$_SESSION['mag_sis'] = $mag_sis;
+
+			$feriado = $row["feriado"];
+			$_SESSION['feriado'] = $feriado;
+			$fferiado = $row["fferiado"];
+			$_SESSION['fferiado'] = $fferiado;
 
 		 }
 		   echo 1;
