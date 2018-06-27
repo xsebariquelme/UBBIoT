@@ -1,117 +1,6 @@
 <?php
-//datosVolcan();
-//datosJSON();
-//datosAerodromo();
-//estadoAire();
-//estadoClima();
-
-/* function datosVolcan()
-{
-$curl = curl_init('http://www.sernageomin.cl/complejo-volcanico-nevados-de-chillan/');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-
-$page = curl_exec($curl);
-
-if(curl_errno($curl)) // check for execution errors
-{
-	echo 'Scraper error: ' . curl_error($curl);
-	exit;
-}
-
-curl_close($curl);
-$regex = '/<span class="fusion-imageframe imageframe-none imageframe-1 hover-type-none">(.*) /s';
-if ( preg_match($regex, $page, $listaVolcan) )
-	echo strip_tags(substr($listaVolcan[0], 0, strpos($listaVolcan[0], '</span>')));
-else 
-    print "Not found"; 
-}
- */
-
-/* function santoral()
-{
-$json = file_get_contents('http://indicadoresdeldia.cl/webservice/indicadores.json');
+$json = file_get_contents('http://deltacode.cl/iot/servicio.php');
 $obj = json_decode($json);
-echo "\n";
-echo 'Santoral de hoy: '.$obj->santoral->hoy;
-} */
-
-/* function economicos()
-{
-$json = file_get_contents('http://indicadoresdeldia.cl/webservice/indicadores.json');
-$obj = json_decode($json);
-echo "\n";
-echo 'Precio del dolar: '.$obj->moneda->dolar;
-echo 'Precio del euro: '.$obj->moneda->euro;
-echo 'UF: '.$obj->moneda->uf."\n";
-echo 'UTM: '.$obj->moneda->utm;
-echo 'IPC: '.$obj->moneda->ipc;
-} */
-
-
-/* function datosAerodromo()
-{
-$curl = curl_init('https://climatologia.meteochile.gob.cl/application/productos/recienteEma/360011');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-$page = curl_exec($curl);
-
-if(curl_errno($curl)) // check for execution errors
-{
-	echo 'Scraper error: ' . curl_error($curl);
-	exit;
-}
-
-curl_close($curl);
-$regex = '/ (.*) /s';
-if ( preg_match($regex, $page, $list) )
-	echo strip_tags(substr($list[0], 0, strpos($list[0], '</h1>'))); 
-else 
-    print "Not found"; 
-}  */ 
-
-function estadoAire()
-{
-$curl = curl_init('http://airechile.mma.gob.cl/comunas/chillan');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-
-$page = curl_exec($curl);
-
-if(curl_errno($curl)) // check for execution errors
-{
-	echo 'Scraper error: ' . curl_error($curl);
-	exit;
-}
-
-curl_close($curl);
-$regex = '/<h3 class="panel-title">(.*) /s';
-if ( preg_match($regex, $page, $list) )
-    echo strip_tags(substr($list[0], 0, strpos($list[0], ' <small>')));
-else 
-    print "Not found"; 
-}
-
-function estadoClima()
-{
-  $curl = curl_init('https://www.meteored.cl/tiempo-en_Chillan-America+Sur-Chile-Biobio--1-18264.html');
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-
-$page = curl_exec($curl);
-
-if(curl_errno($curl)) // check for execution errors
-{
-	echo 'Scraper error: ' . curl_error($curl);
-	exit;
-}
-
-curl_close($curl);
-$regex = '/<dd class="ddDesc T1Loc" title="Descripci&oacute;n Atmosf&eacute;rica">(.*) /s';
-if ( preg_match($regex, $page, $list) )
-//echo $list[0];	
-echo strip_tags(substr($list[0], 0, strpos($list[0], '</dd>')));
-else 
-    print "Not found"; 
-}
 ?>
 
 
@@ -257,7 +146,7 @@ else
   <section id="intro">
 
     <div class="intro-content">
-      <h2>El tiempo en Chillán es <?php estadoClima(); ?><br></h2>
+      <h2>El tiempo en Chillán es <?php echo $obj[0]->datos_meteorologicos->estado_actual; ?><br></h2>
     </div>
 
     <div id="intro-carousel" class="owl-carousel" >
@@ -285,15 +174,15 @@ else
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa fa-thermometer-half"></i></div>
-              <h4 class="title"><a href="">Temperatura actual</a></h4>
-              <p class="description"> 5°C</p>
+              <h4 class="title">Sensación Termica</h4>
+              <p class="description">La sensación termica actual es de <?php echo $obj[0]->datos_meteorologicos->sensacion_termica; ?></p>
             </div>
           </div>
 		  <div class="col-lg-6">
             <div class="box wow fadeInRight">
 			<div class="icon"><i class="fa fa-cloud"></i></div>
-              <h4 class="title"><a href="">Calidad del Aire</a></h4>
-              <p class="description">El estado del Aire para hoy es: <?php estadoAire(); ?></p>
+              <h4 class="title">Calidad del Aire</h4>
+              <p class="description">El estado del Aire para hoy es <?php echo $obj[0]->datos_meteorologicos->estado_aire; ?></p>
             </div>
           </div>
 		  <div class="col-lg-4">
@@ -313,33 +202,7 @@ else
 			<div class="col-lg-4">
 		    </div>
 		</div>
-		  
-		  
-		  
-
-
-		      <!--==========================
-
-DATOS EXTRA
-		  <div class="col-lg-6">
-            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-             <div class="icon"><i class="fa fa-user"></i></div>
-              <h4 class="title"><a href="">Santoral</a></h4>
-              <p class="description"><?php //santoral(); ?></p> 
-            </div>
-          </div>
-		  
-		<div class="col-lg-6">
-            <div class="box wow fadeInRight" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-money"></i></div>
-              <h4 class="title"><a href="">Datos Economicos</a></h4>
-              <p class="description"> <?php //economicos();?></p>
-            </div>
-        </div>
-    ============================-->
-          
-
-          
+		 
 
         </div>
 
@@ -360,12 +223,7 @@ DATOS EXTRA
         &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
-        -->
+       
         <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade
       </div>
     </div>
@@ -420,6 +278,7 @@ DATOS EXTRA
 		});	
 	});
 </script>
+
 
 <script>
   function noback(){
