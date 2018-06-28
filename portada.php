@@ -27,7 +27,7 @@ $json_data = json_decode($json, true);
 
                     <?php if($_REQUEST['c']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -46,7 +46,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['d']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -64,7 +64,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['e']=='1') : ?>
                     <div class="col-md-6">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -82,7 +82,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['f']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -100,7 +100,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['g']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -118,7 +118,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['h']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -136,7 +136,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['i']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -154,7 +154,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['j']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -173,7 +173,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['k']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-primary p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -281,7 +281,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['q']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-warning p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -299,7 +299,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['r']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-warning p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
@@ -319,7 +319,7 @@ $json_data = json_decode($json, true);
 
                           <?php if($_REQUEST['t']=='1') : ?>
                     <div class="col-md-3">
-                        <div class="card bg-success p-20">
+                        <div class="card bg-warning p-20">
                             <div class="media widget-ten">
                                 <div class="media-left meida media-middle">
                                     <span><i class="ti-alert f-s-40"></i></span>
