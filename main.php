@@ -238,6 +238,7 @@ $json = file_get_contents('http://deltacode.cl/iot/servicio.php');
 $obj = json_decode($json);
 
 
+
 echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hola ' . $_SESSION['nombre'] . ', abrigate hoy la temperatura minima es de ' .$obj[0]->datos_meteorologicos->temperatura_minima. '°C"); </script>';
 ?>
  </body>
