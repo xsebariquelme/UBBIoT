@@ -298,7 +298,7 @@ h6 {
   color: #1976d2;
 }
 .bg-primary {
-  background-color: #5c4ac7 !important;
+  background-color: #000e75 !important;
 }
 .bg-success {
   background-color: #26dad2 !important;
@@ -862,14 +862,14 @@ h6.h1 {
 /*    Background Mixins
 --------------------------*/
 .bg-primary {
-  background: #4680ff !important;
+  background: #000e75 !important;
   color: #ffffff;
-  fill: #4680ff;
+  fill: #000e75;
 }
 .bg-success {
-  background: #26dad2 !important;
+  background: #044d17 !important;
   color: #ffffff;
-  fill: #26dad2;
+  fill: #044d17;
 }
 .bg-info {
   background: #62d1f3 !important;
@@ -882,9 +882,9 @@ h6.h1 {
   fill: #fc6180;
 }
 .bg-warning {
-  background: #ffb64d !important;
+  background: #be460d !important;
   color: #ffffff;
-  fill: #ffb64d;
+  fill: #be460d;
 }
 .bg-pink {
   background: #e6a1f2 !important;
