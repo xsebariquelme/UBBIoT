@@ -5,40 +5,9 @@ $json_data = json_decode($json, true);
 
 ?>
 
-<?php if($_REQUEST['b']==5) : ?>
-<div class="row">
-                    <div class="col-lg">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-alert f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["feriado"]);  ?></h2>
-                                    <p class="m-b-0">Feriado cercano</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-alert f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["fecha"]);  ?></h2>
-                                    <p class="m-b-0">Fecha del feriado</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
-</div>
-
-<?php elseif($_REQUEST['b']==4) : ?>
+<?php if($_REQUEST['b']==4) : ?>
 <div class="row">
                     <div class="col-lg">
                         <div class="card bg-success p-20">
@@ -49,6 +18,34 @@ $json_data = json_decode($json, true);
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["varios"]["santoral_hoy"]);  ?></h2>
                                     <p class="m-b-0">Santoral de hoy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                   <div class="col-lg">
+                        <div class="card bg-success p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-alert f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["feriado"]);  ?> <?php print_r($json_data[0]["feriado_cercano"]["fecha"]);  ?></h2>
+                                    <p class="m-b-0">Feriado cercano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="col-md-3">
+                        <div class="card bg-success p-20">
+                            <div class="media widget-ten">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="ti-alert f-s-40"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 class="color-white"><?php print_r($json_data[0]["varios"]["lugar_sismo"]);  ?> <?php print_r($json_data[0]["varios"]["magnitud_sismo"]);  ?> MI</h2>
+                                    <p class="m-b-0">Lugar del sismo</p>
                                 </div>
                             </div>
                         </div>

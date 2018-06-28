@@ -120,12 +120,7 @@
 		}else{ 
 			$l_sismo=0;
 		}
-		$mag_sis=$_POST['mag_sis'];
-		if($mag_sis=="true"){
-			$mag_sis=1;	
-		}else{ 
-			$mag_sis=0;
-		}
+	
 
 		$feriado=$_POST['feriado'];
 		if($feriado=="true"){
@@ -133,19 +128,14 @@
 		}else{ 
 			$feriado=0;
 		}
-		$fferiado=$_POST['fferiado'];
-		if($fferiado=="true"){
-			$fferiado=1;	
-		}else{ 
-			$fferiado=0;
-		}
+	
 
 
 		if(buscaRepetido($usuario,$password,$conexion)==1){
 			echo 2;
 		}else{
-			$sql="INSERT into usuarios (nombre,apellido,usuario,password,sen_term,temp_max,temp_min,est_act,viento,lluv_ca,presion,humedad,alert_vol,est_aire,dolar,euro,uf,utm,ipc,santoral,l_sismo,mag_sis,feriado,fferiado)
-				values ('$nombre','$apellido','$usuario','$password','$sen_term','$temp_max','$temp_min','$est_act','$viento','$lluv_ca','$presion','$humedad','$alert_vol','$est_aire','$dolar','$euro','$uf','$utm','$ipc','$santoral','$l_sismo','$mag_sis','$feriado','$fferiado')";
+			$sql="INSERT into usuarios (nombre,apellido,usuario,password,sen_term,temp_max,temp_min,est_act,viento,lluv_ca,presion,humedad,alert_vol,est_aire,dolar,euro,uf,utm,ipc,santoral,l_sismo,feriado)
+				values ('$nombre','$apellido','$usuario','$password','$sen_term','$temp_max','$temp_min','$est_act','$viento','$lluv_ca','$presion','$humedad','$alert_vol','$est_aire','$dolar','$euro','$uf','$utm','$ipc','$santoral','$l_sismo','$feriado')";
 			echo $result=mysqli_query($conexion,$sql);
 		}
 

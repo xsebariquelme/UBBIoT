@@ -53,17 +53,16 @@ CREATE TABLE `usuarios` (
   `ipc` varchar(1) NOT NULL DEFAULT '0',
   `santoral` varchar(1) NOT NULL DEFAULT '0',
   `l_sismo` varchar(1) NOT NULL DEFAULT '0',
-  `mag_sis` varchar(1) NOT NULL DEFAULT '0',
-  `feriado` varchar(1) NOT NULL DEFAULT '0',
-  `fferiado` varchar(1) NOT NULL DEFAULT '0'
+  `feriado` varchar(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `password`, `sen_term`, `temp_max`, `temp_min`, `est_act`, `viento`, `lluv_ca`, `presion`, `humedad`, `alert_vol`, `est_aire`, `dolar`, `euro`, `uf`, `utm`, `ipc`, `santoral`, `l_sismo`, `mag_sis`, `feriado`, `fferiado`) VALUES
-(150, 'Felipe', 'Contreras', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1', '1', '1');
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `usuario`, `password`, `sen_term`, `temp_max`, `temp_min`, `est_act`, `viento`, `lluv_ca`, `presion`, `humedad`, `alert_vol`, `est_aire`, `dolar`, `euro`, `uf`, `utm`, `ipc`, `santoral`, `l_sismo`, `feriado`) VALUES
+(150, 'Felipe', 'Contreras', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '0', '1', '1', '1');
+
 
 --
 -- Índices para tablas volcadas

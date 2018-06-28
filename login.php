@@ -55,13 +55,11 @@
 			$_SESSION['santoral'] = $santoral;
 			$l_sismo = $row["l_sismo"];
 			$_SESSION['l_sismo'] = $l_sismo;
-			$mag_sis = $row["mag_sis"];
-			$_SESSION['mag_sis'] = $mag_sis;
+		
 
 			$feriado = $row["feriado"];
 			$_SESSION['feriado'] = $feriado;
-			$fferiado = $row["fferiado"];
-			$_SESSION['fferiado'] = $fferiado;
+
 
 		 }
 		   echo 1;

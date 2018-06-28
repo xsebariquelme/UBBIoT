@@ -305,7 +305,7 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["varios"]["lugar_sismo"]);  ?></h2>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["varios"]["lugar_sismo"]);  ?> <?php print_r($json_data[0]["varios"]["magnitud_sismo"]);  ?> MI</h2>
                                     <p class="m-b-0">Lugar del sismo</p>
                                 </div>
                             </div>
@@ -315,23 +315,7 @@ $json_data = json_decode($json, true);
                      
                     <?php endif; ?>
 
-                          <?php if($_REQUEST['s']=='1') : ?>
-                    <div class="col-md-3">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-alert f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["varios"]["magnitud_sismo"]);  ?> MI</h2>
-                                    <p class="m-b-0">Magnitud del sismo</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php else : ?>
-                     
-                    <?php endif; ?>
+                        
 
                           <?php if($_REQUEST['t']=='1') : ?>
                     <div class="col-md-3">
@@ -341,7 +325,7 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["feriado"]);  ?></h2>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["feriado"]);  ?> <?php print_r($json_data[0]["feriado_cercano"]["fecha"]);  ?></h2></h2>
                                     <p class="m-b-0">Feriado cercano</p>
                                 </div>
                             </div>
@@ -351,24 +335,7 @@ $json_data = json_decode($json, true);
                      
                     <?php endif; ?>
 
-                          <?php if($_REQUEST['u']=='1') : ?>
-                    <div class="col-md-3">
-                        <div class="card bg-success p-20">
-                            <div class="media widget-ten">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="ti-alert f-s-40"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["fecha"]);  ?></h2>
-                                    <p class="m-b-0">Fecha del feriado</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php else : ?>
-                     
-                    <?php endif; ?>
-
+                         
                
                  </div>
                 <!-- End PAge Content -->

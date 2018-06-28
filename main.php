@@ -21,10 +21,9 @@ $session_value15=(isset($_SESSION['ipc']))?$_SESSION['ipc']:'';
 
 $session_value16=(isset($_SESSION['santoral']))?$_SESSION['santoral']:'';
 $session_value17=(isset($_SESSION['l_sismo']))?$_SESSION['l_sismo']:'';
-$session_value18=(isset($_SESSION['mag_sis']))?$_SESSION['mag_sis']:'';
 
 $session_value19=(isset($_SESSION['feriado']))?$_SESSION['feriado']:'';
-$session_value20=(isset($_SESSION['fferiado']))?$_SESSION['fferiado']:'';
+
 
 
 ?>
@@ -123,7 +122,7 @@ $session_value20=(isset($_SESSION['fferiado']))?$_SESSION['fferiado']:'';
                         <li class="nav-devider"></li>
                         <li class="nav-label">Menú</li>
                         
-                        <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>,<?php echo $session_value3;?>, <?php echo $session_value4;?>, <?php echo $session_value5;?>, <?php echo $session_value6;?>, <?php echo $session_value7;?>, <?php echo $session_value8;?>, <?php echo $session_value9;?>, <?php echo $session_value10;?>, <?php echo $session_value11;?>, <?php echo $session_value12;?>, <?php echo $session_value13;?>, <?php echo $session_value14;?>, <?php echo $session_value15;?>, <?php echo $session_value16;?>, <?php echo $session_value17;?>, <?php echo $session_value18;?>, <?php echo $session_value19;?>, <?php echo $session_value20;?> );"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
+                        <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>,<?php echo $session_value3;?>, <?php echo $session_value4;?>, <?php echo $session_value5;?>, <?php echo $session_value6;?>, <?php echo $session_value7;?>, <?php echo $session_value8;?>, <?php echo $session_value9;?>, <?php echo $session_value10;?>, <?php echo $session_value11;?>, <?php echo $session_value12;?>, <?php echo $session_value13;?>, <?php echo $session_value14;?>, <?php echo $session_value15;?>, <?php echo $session_value16;?>, <?php echo $session_value17;?>, <?php echo $session_value19;?> );"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
 						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
@@ -132,12 +131,10 @@ $session_value20=(isset($_SESSION['fferiado']))?$_SESSION['fferiado']:'';
 						<li> <a onClick="cargar2('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
                             
                         </li>
-						<li> <a onClick="cargar2('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Santoral </span></a>
+						<li> <a onClick="cargar2('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Varios </span></a>
                             
                         </li>
-						<li> <a onClick="cargar2('divD',5);" class="" href="#" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Feriados</span></a>
-                            
-                        </li>
+					
                         
                     </ul>
                  </nav>
@@ -205,20 +202,20 @@ $session_value20=(isset($_SESSION['fferiado']))?$_SESSION['fferiado']:'';
 
     var myvar16='<?php echo $session_value16;?>';
     var myvar17='<?php echo $session_value17;?>';
-    var myvar18='<?php echo $session_value18;?>';
+  
 
     var myvar19='<?php echo $session_value19;?>';
-    var myvar20='<?php echo $session_value20;?>';
+  
 
 
 
-    function cargar2(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u){
+    function cargar2(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,t){
 	$('#contentf').html('<img src="lo.gif">');
-	$('#contentf').load(a+'.php',{b:b,c:c,d:d,e:e,f:f,g:g,h:h,i:i,j:j,k:k,l:l,m:m,n:n,o:o,p:p,q:q,r:r,s:s,t:t,u:u});
+	$('#contentf').load(a+'.php',{b:b,c:c,d:d,e:e,f:f,g:g,h:h,i:i,j:j,k:k,l:l,m:m,n:n,o:o,p:p,q:q,r:r,t:t});
     }	
 
     $(document).ready(function(){
-        cargar2('portada',myvar,myvar2,myvar3,myvar4,myvar5,myvar6,myvar7,myvar8,myvar9,myvar10,myvar11,myvar12,myvar13,myvar14,myvar15,myvar16,myvar17,myvar18,myvar19,myvar20);
+        cargar2('portada',myvar,myvar2,myvar3,myvar4,myvar5,myvar6,myvar7,myvar8,myvar9,myvar10,myvar11,myvar12,myvar13,myvar14,myvar15,myvar16,myvar17,myvar19);
     })
     </script>
     

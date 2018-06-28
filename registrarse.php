@@ -128,12 +128,7 @@
 						</div>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox"  id="l_sismo">
-							<label class="form-check-label" >Lugar sismo</label>
-						</div>
-
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="mag_sis">
-							<label class="form-check-label" >Magnitud sismo</label>
+							<label class="form-check-label" >último sismo sensible</label>
 						</div>
 
 						
@@ -142,12 +137,9 @@
 					
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox"  id="feriado">
-							<label class="form-check-label" >Nombre del Feriado cercano</label>
+							<label class="form-check-label" >Feriado cercano</label>
 						</div>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="fferiado">
-							<label class="form-check-label" >Fecha del feriado</label>
-						</div>
+					
 					
 
 							<p></p>
@@ -212,9 +204,8 @@
 					"&ipc=" + $('#ipc').is(':checked')+
 					"&santoral=" + $('#santoral').is(':checked')+
 					"&l_sismo=" + $('#l_sismo').is(':checked')+
-					"&mag_sis=" + $('#mag_sis').is(':checked')+
-					"&feriado=" + $('#feriado').is(':checked')+
-					"&fferiado=" + $('#fferiado').is(':checked');
+					"&feriado=" + $('#feriado').is(':checked');
+					
 
 					
 					$.ajax({
@@ -229,7 +220,7 @@
 							else if(r==1){
 								$('#frmRegistro')[0].reset();
 								alertify.success("Agregado con exito");
-									setTimeout("redireccionarPagina()",1);
+									setTimeout("redireccionarPagina()",1000);
 							}else{
 								alertify.error("Error","Fallo al agregar");
 							}
