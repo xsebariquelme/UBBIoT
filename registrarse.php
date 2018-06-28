@@ -45,6 +45,8 @@
 							</div>
 						</div>
 						<h3>Seleccione sus preferencias</h3>  
+						<label><b>Datos meteorológicos</b></label>
+						<br>
 				        <div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox" id="sen_term">
 							<label class="form-check-label" >Sensación Térmica</label>
@@ -88,8 +90,9 @@
 							<input class="form-check-input" type="checkbox"  id="est_aire">
 							<label class="form-check-label" >Estado aire</label>
 						</div>
-				
-				  
+						<br>
+						<label><b>Indicadores económicos</b></label>
+				  		<br>
 						<div class="form-check form-check-inline">
 							<input class="form-check-input" type="checkbox"  id="dolar">
 							<label class="form-check-label" >Dolar</label>
@@ -114,7 +117,9 @@
 							<label class="form-check-label" >IPC</label>
 						</div>
 					
-
+						<br>
+						<label><b>Varios</b></label>
+				  		<br>
 
 					 
 						<div class="form-check form-check-inline">
