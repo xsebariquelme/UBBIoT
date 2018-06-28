@@ -52,6 +52,8 @@ $session_value19=(isset($_SESSION['feriado']))?$_SESSION['feriado']:'';
     <!-- Custom CSS -->
     <link href="assets/css/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="css/alertifyjs/css/themes/default.css">
+  <link rel="stylesheet" type="text/css" href="css/alertifyjs/css/alertify.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -220,23 +222,24 @@ $session_value19=(isset($_SESSION['feriado']))?$_SESSION['feriado']:'';
     </script>
     
 
-    <script src="assets/js/lib/datamap/d3.min.js"></script>
-    <script src="assets/js/lib/datamap/topojson.js"></script>
-    <script src="assets/js/lib/datamap/datamaps.world.min.js"></script>
-    <script src="assets/js/lib/datamap/datamap-init.js"></script>
+
 
     <script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
     <script src="assets/js/lib/weather/weather-init.js"></script>
     <script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
 
-
-    <script src="assets/js/lib/chartist/chartist.min.js"></script>
-    <script src="assets/js/lib/chartist/chartist-plugin-tooltip.min.js"></script>
-    <script src="assets/js/lib/chartist/chartist-init.js"></script>
     <!--Custom JavaScript -->
     <script src="assets/js/scripts.js"></script>
+	<script src="js/alertify.js"></script>
+<?php 
 
+$json = file_get_contents('http://deltacode.cl/iot/servicio.php');
+$obj = json_decode($json);
+
+
+echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hola ' . $_SESSION['nombre'] . ', abrigate hoy la temperatura minima es de ' .$obj[0]->datos_meteorologicos->temperatura_minima. '°C"); </script>';
+?>
  </body>
 
  </html>
