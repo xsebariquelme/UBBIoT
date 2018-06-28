@@ -298,3 +298,7 @@ $obj = json_decode($json);
     </style>
 </body>
 </html>
+<?php 
+echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hoy el santoral es ' . $obj[0]->varios->santoral_hoy . ', recuerda saludar a tus amigues"); </script>';
+
+?>
