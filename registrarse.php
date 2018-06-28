@@ -48,73 +48,73 @@
 						<label><b>Datos meteorológicos</b></label>
 						<br>
 				        <div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox" id="sen_term">
-							<label class="form-check-label" >Sensación Térmica</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox" id="sen_term">
+							Sensación Térmica</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="temp_max">
-							<label class="form-check-label" >Temperatura máxima</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="temp_max">
+							Temperatura máxima</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="temp_min">
-							<label class="form-check-label" >Temperatura minima</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="temp_min">
+							Temperatura minima</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="est_act">
-							<label class="form-check-label" >Estado Actual</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="est_act">
+							Estado Actual</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="viento">
-							<label class="form-check-label" >Velocidad viento</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="viento">
+							Velocidad viento</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="lluv_ca">
-							<label class="form-check-label" >Lluvia caida</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="lluv_ca">
+							Lluvia caida</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="presion">
-							<label class="form-check-label" >Presion</label>
-						</div>
-
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="humedad">
-							<label class="form-check-label" >Humedad</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="presion">
+							Presion</label>
 						</div>
 
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="alert_vol">
-							<label class="form-check-label" >Alerta Volcan</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="humedad">
+							Humedad</label>
 						</div>
 
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="est_aire">
-							<label class="form-check-label" >Estado aire</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="alert_vol">
+							Alerta Volcan</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="est_aire">
+							Estado aire</label>
 						</div>
 						<br>
 						<label><b>Indicadores económicos</b></label>
 				  		<br>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="dolar">
-							<label class="form-check-label" >Dolar</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="dolar">
+							Dolar</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="euro">
-							<label class="form-check-label" >Euro</label>
-						</div>
-
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="uf">
-							<label class="form-check-label" >UF</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="euro">
+							Euro</label>
 						</div>
 
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="utm">
-							<label class="form-check-label" >UTM</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="uf">
+							UF</label>
 						</div>
 
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="ipc">
-							<label class="form-check-label" >IPC</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="utm">
+							UTM</label>
+						</div>
+
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="ipc">
+							IPC</label>
 						</div>
 					
 						<br>
@@ -123,12 +123,12 @@
 
 					 
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="santoral">
-							<label class="form-check-label" >Santoral</label>
+						<label class="form-check-label" >	<input class="form-check-input" type="checkbox"  id="santoral">
+							Santoral</label>
 						</div>
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="l_sismo">
-							<label class="form-check-label" >último sismo sensible</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="l_sismo">
+							Último sismo sensible</label>
 						</div>
 
 						
@@ -136,8 +136,8 @@
 
 					
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox"  id="feriado">
-							<label class="form-check-label" >Feriado cercano</label>
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="feriado">
+							Feriado cercano</label>
 						</div>
 					
 					
