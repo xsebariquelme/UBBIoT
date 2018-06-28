@@ -139,7 +139,14 @@
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="feriado">
 							Feriado cercano</label>
 						</div>
-					
+						<br>
+						<br>
+						<label><b>Todos</b></label>
+						<br>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="select_all">
+							Seleccionar todos</label>
+						</div>
 					
 
 							<p></p>
@@ -236,6 +243,19 @@
 	
 	
 </script>
+<script>
+$(function() {
+    $('#select_all').change(function(){
+        var checkboxes = $(this).closest('form').find(':checkbox');
+        if($(this).prop('checked')) {
+          checkboxes.prop('checked', true);
+        } else {
+          checkboxes.prop('checked', false);
+        }
+    });
+});
+</script>
+
 <style>
 body {
     width: 100%;
