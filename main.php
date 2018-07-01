@@ -127,10 +127,10 @@ $session_value19=(isset($_SESSION['feriado']))?$_SESSION['feriado']:'';
                         <li> <a onClick="cargar2('portada',<?php echo $session_value;?>,<?php echo $session_value2;?>,<?php echo $session_value3;?>, <?php echo $session_value4;?>, <?php echo $session_value5;?>, <?php echo $session_value6;?>, <?php echo $session_value7;?>, <?php echo $session_value8;?>, <?php echo $session_value9;?>, <?php echo $session_value10;?>, <?php echo $session_value11;?>, <?php echo $session_value12;?>, <?php echo $session_value13;?>, <?php echo $session_value14;?>, <?php echo $session_value15;?>, <?php echo $session_value16;?>, <?php echo $session_value17;?>, <?php echo $session_value19;?> );"class="" href="#" aria-expanded="false"><i class="fa fa-star"></i><span class="hide-menu">Destacados </span></a>
                             
                         </li>
-						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos meteorologicos </span></a>
+						<li> <a onClick="cargar('divD',2);" class="" href="#" aria-expanded="false"><i class="fa fa-thermometer-full"></i><span class="hide-menu">Datos Meteorológicos </span></a>
                             
                         </li>
-						<li> <a onClick="cargar2('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores económicos </span></a>
+						<li> <a onClick="cargar2('divD',3);"class="" href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Indicadores Económicos </span></a>
                             
                         </li>
 						<li> <a onClick="cargar2('divD',4);" class="" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Varios </span></a>
@@ -239,7 +239,7 @@ $obj = json_decode($json);
 
 
 
-echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hola ' . $_SESSION['nombre'] . ', abrigate hoy la temperatura minima es de ' .$obj[0]->datos_meteorologicos->temperatura_minima. '°C"); </script>';
+echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hola ' . $_SESSION['nombre'] . ', ¡abrígate! <br> Para hoy la temperatura mínima es de: ' .$obj[0]->datos_meteorologicos->temperatura_minima. '°C."); </script>';
 ?>
  </body>
 

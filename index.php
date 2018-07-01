@@ -68,7 +68,7 @@ $obj = json_decode($json);
         <ul class="nav-menu">
           <li class="menu-active"><a href="#body">Inicio</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Iniciar sesión</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#modalLRForm">Iniciar Sesión</a></li>
           <li><a href="registrarse.php" >Registrarse</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -147,7 +147,7 @@ $obj = json_decode($json);
   <section id="intro">
 
     <div class="intro-content">
-      <h2>El tiempo en Chillán es <?php echo $obj[0]->datos_meteorologicos->estado_actual; ?><br></h2>
+      <h2>El Tiempo en Chillán es: <?php echo $obj[0]->datos_meteorologicos->estado_actual; ?><br></h2>
     </div>
 
     <div id="intro-carousel" class="owl-carousel" >
@@ -167,7 +167,7 @@ $obj = json_decode($json);
       <div class="container">
         <div class="section-header">
           <h2>Servicios</h2>
-          <p>UBB IoT Permite informar a la comunidad con diversos datos e información relevante de la ciudad de Chillán</p>
+          <p>UBB IoT permite informar a la comunidad con diversos datos e información relevante de la ciudad de Chillán.</p>
         </div>
 	
         <div class="row">
@@ -175,25 +175,25 @@ $obj = json_decode($json);
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa fa-thermometer-half"></i></div>
-              <h4 class="title">Sensación Termica</h4>
-              <p class="description">La sensación termica actual es de <?php echo $obj[0]->datos_meteorologicos->sensacion_termica; ?></p>
+              <h4 class="title">Sensación Térmica</h4>
+              <p class="description">La sensación térmica actual es de: <b> <?php echo $obj[0]->datos_meteorologicos->sensacion_termica; ?></b></p>
             </div>
           </div>
 		  <div class="col-lg-6">
             <div class="box wow fadeInRight">
 			<div class="icon"><i class="fa fa-cloud"></i></div>
               <h4 class="title">Calidad del Aire</h4>
-              <p class="description">El estado del Aire para hoy es <?php echo $obj[0]->datos_meteorologicos->estado_aire; ?></p>
+              <p class="description">El estado del Aire para hoy es:<b> <?php echo $obj[0]->datos_meteorologicos->estado_aire; ?></b></p>
             </div>
           </div>
 		  <div class="col-lg-4">
 		  </div>
 		  <div class="col-lg-4">
-		   <p align="center">Inicia sesion para conocer mas datos y personalizarlos</p>
+		   <p align="center">Inicia sesión para conocer más datos y personalizarlos.</p>
 			 <div class="col-lg-12">
 					<div class="row" style="justify-content:center;display:flex">
 						<div class="col-xs-12">
-							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalLRForm" type="button">Iniciar sesión</button>
+							<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modalLRForm" type="button">Iniciar Sesión</button>
 						</div>
 					</div>
 					<div class="row"></div>
@@ -219,15 +219,7 @@ $obj = json_decode($json);
 
 
   <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade
-      </div>
-    </div>
+    
   </footer><!-- #footer -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -299,6 +291,6 @@ $obj = json_decode($json);
 </body>
 </html>
 <?php 
-echo '<script type="text/javascript">alertify.alert("UBBIoT+","Hoy el santoral es ' . $obj[0]->varios->santoral_hoy . ', recuerda saludar a tus amigues"); </script>';
+echo '<script type="text/javascript">alertify.alert("UBBIoT+","Para hoy, el santoral es: ' . $obj[0]->varios->santoral_hoy . '. <br> ¡Recuerda saludar a quien conozcas con ese nombre!"); </script>';
 
 ?>

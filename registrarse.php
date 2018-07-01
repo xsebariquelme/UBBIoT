@@ -18,7 +18,7 @@
 		
 		<div class="col-lg">
 			<div class="jumbotron" style="padding-top: 1rem;padding-bottom: 1rem;">
-				<div class="panel panel-heading"><h1><center>Registro de usuario</center></h1></div>
+				<div class="panel panel-heading"><h1><center>Registro de Usuario</center></h1></div>
 				<br>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
@@ -26,26 +26,26 @@
 						<div class="form-row">
 							<div class="form-group col-md-6">
 							<label>Nombre</label>
-							<input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+							<input type="text" class="form-control" id="nombre" placeholder="Ej: Juan">
 							</div>
 							<div class="form-group col-md-6">
 							<label>Apellido</label>
-							<input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+							<input type="text" class="form-control" id="apellido" placeholder="Ej: Pérez">
 							</div>
 						</div>
 
 						<div class="form-row">
 							<div class="form-group col-md-6">
 							<label>Usuario</label>
-							<input type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario">
+							<input type="text" class="form-control" id="usuario" placeholder="Ej: jperez">
 							</div>
 							<div class="form-group col-md-6">
 							<label for="inputPassword4">Contraseña</label>
-							<input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+							<input type="password" class="form-control" id="password" placeholder="******">
 							</div>
 						</div>
-						<h3>Seleccione sus preferencias</h3>  
-						<label><b>Datos meteorológicos</b></label>
+						<h3>Seleccione sus Preferencias</h3>  
+						<label><b>Datos Meteorológicos</b></label>
 						<br>
 				        <div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox" id="sen_term">
@@ -53,11 +53,11 @@
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="temp_max">
-							Temperatura máxima</label>
+							Temperatura Máxima</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="temp_min">
-							Temperatura minima</label>
+							Temperatura Minima</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="est_act">
@@ -65,7 +65,7 @@
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="viento">
-							Velocidad viento</label>
+							Velocidad del Viento</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="lluv_ca">
@@ -73,7 +73,7 @@
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="presion">
-							Presion</label>
+							Presión</label>
 						</div>
 
 						<div class="form-check form-check-inline">
@@ -83,19 +83,19 @@
 
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="alert_vol">
-							Alerta Volcan</label>
+							Alerta Volcán</label>
 						</div>
 
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="est_aire">
-							Estado aire</label>
+							Estado del Aire</label>
 						</div>
 						<br>
 						<label><b>Indicadores económicos</b></label>
 				  		<br>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="dolar">
-							Dolar</label>
+							Dólar</label>
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="euro">
@@ -128,7 +128,7 @@
 						</div>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="l_sismo">
-							Último sismo sensible</label>
+							Último Sismo Sensible</label>
 						</div>
 
 						
@@ -137,7 +137,7 @@
 					
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="feriado">
-							Feriado cercano</label>
+							Feriado Cercano</label>
 						</div>
 						<br>
 						<br>
@@ -145,7 +145,7 @@
 						<br>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" ><input class="form-check-input" type="checkbox"  id="select_all">
-							Seleccionar todos</label>
+							Seleccionar Todos</label>
 						</div>
 					
 
@@ -176,16 +176,16 @@
 		$('#registrarNuevo').click(function(){
 
 			if($('#nombre').val()==""){
-				alertify.alert("Error","Debes agregar el nombre");
+				alertify.alert("Error","Debes llenar la casilla nombre.");
 				return false;
 			}else if($('#apellido').val()==""){
-				alertify.alert("Error","Debes agregar el apellido");
+				alertify.alert("Error","Debes llenar la casilla apellido.");
 				return false;
 			}else if($('#usuario').val()==""){
-				alertify.alert("Error","Debes agregar el usuario");
+				alertify.alert("Error","Debes llenar la casilla usuario.");
 				return false;
 			}else if($('#password').val()==""){
-				alertify.alert("Error","Debes agregar el password");
+				alertify.alert("Error","Debes llenar la casilla password.");
 				return false;
 			}
 
@@ -222,14 +222,14 @@
 						success:function(r){
 
 							if(r==2){
-								alertify.alert("Este usuario ya existe, prueba con otro :)");
+								alertify.alert("Usuario ya existente, intenta un nuevo usuario.");
 							}
 							else if(r==1){
 								$('#frmRegistro')[0].reset();
-								alertify.success("Agregado con exito");
+								alertify.success("Agregado con Éxito.");
 									setTimeout("redireccionarPagina()",1000);
 							}else{
-								alertify.error("Error","Fallo al agregar");
+								alertify.error("Error","Falló al Agregar.");
 							}
 						}
 					});

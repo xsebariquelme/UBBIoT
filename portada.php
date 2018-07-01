@@ -17,7 +17,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["sensacion_termica"]);?>°</h2>
-                                    <p class="m-b-0">Sensación Termica</p>
+                                    <p class="m-b-0">Sensación Térmica</p>
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["temperatura_maxima"]);  ?>°</h2>
-                                    <p class="m-b-0">Temperatura máxima</p>
+                                    <p class="m-b-0">Temperatura Máxima</p>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["estado_actual"]);  ?></h2>
-                                    <p class="m-b-0">Estado actual</p>
+                                    <p class="m-b-0">Estado Actual</p>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["lluvia_caida"]);  ?> mm</h2>
-                                    <p class="m-b-0">Lluvia caída</p>
+                                    <p class="m-b-0">Lluvia Caída</p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["alerta_volcan"]);  ?></h2>
-                                    <p class="m-b-0">Alerta volcán</p>
+                                    <p class="m-b-0">Alerta Volcán</p>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["datos_meteorologicos"]["estado_aire"]);  ?></h2>
-                                    <p class="m-b-0">Estado del aire</p>
+                                    <p class="m-b-0">Estado del Aire</p>
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["dolar"]);  ?> pesos chilenos</h2>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["dolar"]);  ?> pesos chilenos.</h2>
                                     <p class="m-b-0">Valor Dólar</p>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["euro"]);  ?> pesos chilenos</h2>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["euro"]);  ?> pesos chilenos.</h2>
                                     <p class="m-b-0">Valor Euro</p>
                                 </div>
                             </div>
@@ -233,8 +233,8 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["uf"]);  ?> pesos chilenos</h2>
-                                    <p class="m-b-0">Valor de UF</p>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["uf"]);  ?> pesos chilenos.</h2>
+                                    <p class="m-b-0">Valor UF</p>
                                 </div>
                             </div>
                         </div>
@@ -251,8 +251,8 @@ $json_data = json_decode($json, true);
                                     <span><i class="ti-alert f-s-40"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["utm"]);  ?> pesos chilenos</h2>
-                                    <p class="m-b-0">Valor de UTM</p>
+                                    <h2 class="color-white"><?php print_r($json_data[0]["datos_economicos"]["utm"]);  ?> pesos chilenos.</h2>
+                                    <p class="m-b-0">Valor UTM</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +288,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["varios"]["santoral_hoy"]);  ?></h2>
-                                    <p class="m-b-0">Santoral de hoy</p>
+                                    <p class="m-b-0">Santoral de Hoy</p>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +306,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["varios"]["lugar_sismo"]);  ?> <?php print_r($json_data[0]["varios"]["magnitud_sismo"]);  ?> MI</h2>
-                                    <p class="m-b-0">Lugar del sismo</p>
+                                    <p class="m-b-0">Lugar del Sismo</p>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +326,7 @@ $json_data = json_decode($json, true);
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2 class="color-white"><?php print_r($json_data[0]["feriado_cercano"]["feriado"]);  ?> <?php print_r($json_data[0]["feriado_cercano"]["fecha"]);  ?></h2></h2>
-                                    <p class="m-b-0">Feriado cercano</p>
+                                    <p class="m-b-0">Feriado Cercano</p>
                                 </div>
                             </div>
                         </div>
